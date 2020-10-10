@@ -15,14 +15,18 @@ body{
 
 .dropdown-menu .dropdown-item{
     text-align: right;
+    
 }
 
 .bg-secondary{
     background-color: rgb(59, 46, 179) !important;
+    
 }
 
 .bg-light{
-    background-color: #EEE !important;
+    background-color: rgb(109, 56, 56) !important;
+    box-shadow: 4px 4px 15px 1px #000000;
+
 }
 
 /* Start Sidebar */

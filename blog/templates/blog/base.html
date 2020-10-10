@@ -6,9 +6,9 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% if title %}
-        <title>  مقالات تقنية | {{title}}</title>
+        <title>   CCSE UOH | {{title}}</title>
         {% else %}
-        <title>مقالات تقنية</title>
+        <title> CCSE UOH</title>
         {% endif %}
         <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/main1.css' %}">
@@ -16,46 +16,74 @@
      </head>
      <body>
         <header>
-            <!--Start Navbar-->
-            <nav class="navbar-custom navbar navbar-expand-lg navbar-light bg-light  ">
-                <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{% static 'blog/images/imagess.png' %}" alt="شعار مدونة" width="30px" >
-                   مقالات تقنية </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
- 
-                <div  class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active " >
-                            <a  style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'home' %}">الرئيسية <span class="sr-only">(current)</span></a>
+
+            <div id="preloder">
+                <div class="loader"></div>
+            </div>
+        
+            <nav class=" nav-tabs navbar navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
+                <a class="navbar-brand" href="">
+                            
+                    CCSE UOH </a>
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="/"><img src="" alt=""></a>
+                  <button class="navbar-toggler navbar-toggler-righ text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        
+        
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarResponsive">
+                      
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1">
+                          <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger    " href="index.html">الرئيسية </a>
                         </li>
-          
-                        <li class="nav-item">
-                            <a style="color:rgb(255, 254, 254);" class="nav-link active" href="{% url 'about' %}">من نحن</a>
+        
+        
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="courses.html">الدورات </a>
+                        </li>
+        
+        
+                       <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">المدونة </a>
+                        </li>
+        
+                        <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'about' %}">تواصل معنا </a>
                         </li>
                     </ul>
-    
-                   
+
+
                     {% if user.is_authenticated %}
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active  "><a style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'new_post' %}">تدوينة جديدة</a></li>
-                                <li class="nav-item active "><a style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'profile' %}">الملف الشخصي</a></li>
-                                <li class="nav-item active "><a style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'logout' %}">تسجيل خروج</a></li>
-                            </ul>
-                     {% else %}
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active "><a style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'login' %}">تسجيل دخول</a></li>
-                                <li class="nav-item active "><a style="color:rgb(255, 254, 254);" class="nav-link" href="{% url 'register' %}">تسجيل</a></li>
-                            </ul>
-                    {% endif %} 
-    
-            
+                    <div class="d-flex p-2">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1  "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'new_post' %}">تدوينة جديدة</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'profile' %}">الملف الشخصي</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">تسجيل خروج</a></li>
+                        </ul>
+                        {% else %}
+
+                        <ul class="navbar-nav ml-auto">
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'login' %}">تسجيل الدخول </a>
+                      </li>
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'register' %}">التسجيل</a>
+                      </li>
+                    </div>
+                    </ul>
+                    {% endif %}        
+                        
+                    </div>
+                  </div>
                 </div>
+              </nav>
+        
+
+              
+
        
-            </nav>
-            <!--End Navbar-->
         </header>
          
   <section>
@@ -89,10 +117,10 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md">
-                        <div class="card-group mt-3">                          
+                        <div class="card-group mt-3 ">                          
                             
-                            <div class="card border-info p-2 m-3" style="max-width: 18rem;">
-                                <div class="card-header text-center border-bottom p-2 m-3">من أنا</div>
+                            <!-- <div class="card-header  text-center border-bottom p-2 m-3">
+                                <div class="card-header text-center border-bottom p-2 m-3"><h3>من أنا</h3></div>
                                 <div class="card-body text-info">
                                   <h5 class="card-title">يوسف الشمري </h5>
                                   <p class="card-text">            
@@ -100,17 +128,56 @@
                                 </p>
 
                                 </div>
-                              </div>
+                              </div> -->
 
-                              
+                            
+                           
+                                 
+                            
+
+
+                            <div class="card m-3">
+                                <h3 class="card-header  text-center border-bottom p-2 m-3">تطوير</h3>
+                                <h4 class="card-body text-center">
+                                    <h4>المجالات </h4>
+                                    <ul class="contact-list">
+                                        <li><a href="">--------</a></li>
+                                        <li><a href="">--------</a></li>
+                                        <li><a href="">--------</a></li>
+                                        <li><a href="">--------</a></li>
+                                        <li><a href="">--------</a></li>
+                                    </ul>
+                                </h4>
+                            </div>
+                            <div class="card m-3">
+                                <h3 class="card-header  text-center border-bottom p-2 m-3"> للاخبار!! </h3>
+                                <h4 class="card-body text-center">
+                                    <p class="card-text">            
+                                        <div class="widget-item">
+                                            <form class="footer-newslatter">
+                                                <p>اشترك بالاخبار</p>
+                                                <input type="email" placeholder="E-mail">
+                                                <button class="site-btn">الاشتراك </button>
+                                            </form>
+                                        </div>                                 </p>
+                                </h4>
+                            </div>
                             <div class="card m-3">
                                 <h3 class="card-header  text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
                                 <h4 class="card-body text-center">
-                                    <a class="text-secondary" href="https://www.facebook.com/yoyo4822/"><i class="fab fa-facebook"></i></a>
-                                    <a class="text-secondary" href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-                                    <a class="text-secondary" href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin"></i></a>
-                                </h4>
+                                    <div class="widget-item">
+                                        <h4></h4>
+                                        <ul>
+                                            <li><a href="">--------</a></li>
+                                            <li><a href="">--------</a></li>
+                                            <li><a href="">--------</a></li>
+                                            <li><a href="">--------</a></li>
+                                            <li><a href="">--------</a></li>
+                                        </ul>
+                                    </div>
                             </div>
+
+
                         </div>
                     </div>
                 </div>
