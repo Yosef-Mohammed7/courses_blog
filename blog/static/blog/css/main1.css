@@ -185,7 +185,13 @@ body{
     padding: 17px 20px;
 }
 
-
+.imgme{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 5px;
+	width: 60px;
+	
+}
 
 
 .section-title {
@@ -302,7 +308,7 @@ h4{
 	padding: 0.25rem 0.75rem;
 	font-size: 1.25rem;
 	line-height: 1;
-	background-color: red;
+	background-color: rgb(74, 57, 167);
 	border: 0.125rem solid transparent;
 	border-radius: 0.5rem;
   }
@@ -325,13 +331,13 @@ h4{
 	border-color: rgba(255, 255, 255, 0.1);
   }
   .bg-primary {
-	background-color: #e78200 !important;
+	background-color: #549ec9 !important;
   }
   
   a.bg-primary:hover, a.bg-primary:focus,
   button.bg-primary:hover,
   button.bg-primary:focus {
-	background-color: #e78200 !important;
+	background-color: #549ec9 !important;
   }.text-white {
 	color: #fff !important;
   }
@@ -408,3 +414,10 @@ h4{
 	background-color: #fff;
 	border-color: #dee2e6 #dee2e6 #fff;
   }  
+
+  .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
+  .show > .btn-outline-light.dropdown-toggle {
+	color: #212529;
+	background-color: #f8f9fa;
+	border-color: #f8f9fa;
+  }

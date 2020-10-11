@@ -14,23 +14,9 @@
         <link rel="stylesheet" href="{% static 'blog/css/freelancer.css' %}">
         <link rel="stylesheet" href="{% static 'blog/css/main11.css' %}">
 		<link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}"> 
-		<link rel="shortcut " href="{% static 'blog/images' %}">   
-  
-<!-- course
-		<link href="img/favicon.ico" rel="shortcut icon"/>
-
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
-		<link rel="stylesheet" href="css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="css/font-awesome.min.css"/>
-		<link rel="stylesheet" href="css/owl.carousel.css"/>
-		<link rel="stylesheet" href="css/style.css"/>
-		<link rel="stylesheet" href="c/css/bootstrap.min.css"/>
-		<link rel="stylesheet" href="c/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="c/css/owl.carousel.css"/>
-		<link rel="stylesheet" href="c/css/style.css"/>
-		<link rel="stylesheet" href="c/css/freelancer.css"/>
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	 section -->
+        <link rel="shortcut " href="{% static 'blog/images' %}">  
+        <link rel="shortcut icon" href="{% static 'blog/images/img/44.jpg' %}">   
+ 
 	
 	
      </head>
@@ -43,7 +29,8 @@
         
             <nav class=" nav-tabs navbar navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
                 <a class="navbar-brand" href="">
-                            
+                    <img class="imgme" src="{% static 'blog/images/img/44.jpg' %}">
+
                     CCSE UOH </a>
                 <div class="container">
                   <a class="navbar-brand js-scroll-trigger" href="/"><img src="" alt=""></a>
@@ -102,142 +89,14 @@
 
 
 
-	<section class="hero-section set-bg" data-setbg="img/bg.jpg">
-		<div class="container">
-			<div class="hero-text text-white ">
-				<h2>كورسات كلية علوم وهندسة الحاسب الآلي</h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					
-				</div>
-			</div>
-		</div>
-	
-	 <!-- search section -->
-<br><br>br
-<section class="search-section ss-other-page">
-	<div class="container  p-5 mb-5">
-		<div class="search-warp">
-			<div class="section-title text-white">
-				<h2><span>ابحث عن دورتك </span></h2>
-			</div>
-			<div class="row">
-				<div class="col-lg-10 offset-lg-1">
-					<!-- search form -->
-					<form class="course-search-form">
-						<input type="text" placeholder="Course">
-						<input type="text" class="last-m" placeholder="Category">
-						<button class="site-btn btn-dark">البحث عن الدورة </button>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-</section>
-<!-- search section end -->
+              {% block body %}
+
+              {% endblock body %}
 
 
 
-	<!-- Hero section end -->
 
-
-	<!-- categories section -->
-	<section class="categories-section spad">
-		<div class="container">
-			<div class="section-title">
-				<h2>فئات الدورات لدينا</h2>
-			</div>
-			<div class="row">
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/1.jpg"></div>
-						<div class="ci-text">
-							<h5>تقنية المعلومات </h5>
-							<p>انضم لهذه الدورة </p>
-							<span>120 Courses</span>
-						</div>
-					</div>
-				</div>
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/2.jpg"></div>
-						<div class="ci-text">
-							<h5>تطوير المواقع</h5>
-							<p>انضم لهذه الدورة </p>
-							<span>70 Courses</span>
-						</div>
-					</div>
-				</div>
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/3.jpg"></div>
-						<div class="ci-text">
-							<h5>التصوير</h5>
-							<p>انضم لهذه الدورة </p>
-							<span>55 Courses</span>
-						</div>
-					</div>
-				</div>
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/4.jpg"></div>
-						<div class="ci-text">
-							<h5>التواصل الاجتماعي</h5>
-							<p>انضم لهذه الدورة </p>
-							<span>40 Courses</span>
-						</div>
-					</div>
-				</div>
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/5.jpg"></div>
-						<div class="ci-text">
-							<h5>التصميم</h5>
-							<p>انضم لهذه الدورة </p>
-							<span>220 Courses</span>
-						</div>
-					</div>
-				</div>
-				<!-- categorie -->
-				<div class="col-lg-4 col-md-6">
-					<div class="categorie-item">
-						<div class="ci-thumb set-bg" data-setbg="img/categories/6.jpg"></div>
-						<div class="ci-text">
-							<h5>العملات الرقمية</h5>
-							<p>انضم لهذه الدورة </p>
-							<span>25 Courses</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- categories section end -->
-
-
-	<!-- banner section -->
-	<section class="banner-section spad">
-		<div class="container">
-			<div class="section-title mb-0 pb-2">
-				<h2>انضم ألينا الان !</h2>
-<p>في هذه المنصه نهدف الى تطوير المهارات لدى الطلاب وتدريبهم للسوق العمل</p>
-			</div>
-			<div class="text-center pt-5">
-				<a href="#" class="site-btn">سجل الان </a>
-			</div>
-		</div>
-	</section>
-
-	<!-- banner section end -->
-
-
+              
 	<footer class="bg-secondary">
 		<div class="container-fluid">
 			<div class="row">
@@ -264,13 +123,7 @@
 						<div class="card m-3">
 							<h3 class="card-header  text-center border-bottom p-2 m-3">تطوير</h3>
 							<h4 class="card-body text-center">
-								<h4>المجالات </h4>
-								<ul class="contact-list">
-									<li><a href="">--------</a></li>
-									<li><a href="">--------</a></li>
-									<li><a href="">--------</a></li>
-									<li><a href="">--------</a></li>
-									<li><a href="">--------</a></li>
+								
 								</ul>
 							</h4>
 						</div>
@@ -280,7 +133,7 @@
 								<p class="card-text">            
 									<div class="widget-item">
 										<form class="footer-newslatter">
-											<p>اشترك بالاخبار</p>
+											<p></p>
 											<input type="email" placeholder="E-mail">
 											<button class="site-btn">الاشتراك </button>
 										</form>
@@ -292,13 +145,7 @@
 							<h4 class="card-body text-center">
 								<div class="widget-item">
 									<h4></h4>
-									<ul>
-										<li><a href="">--------</a></li>
-										<li><a href="">--------</a></li>
-										<li><a href="">--------</a></li>
-										<li><a href="">--------</a></li>
-										<li><a href="">--------</a></li>
-									</ul>
+								
 								</div>
 						</div>
 

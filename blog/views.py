@@ -25,11 +25,18 @@ def home(request):
     return render(request, 'blog/index.html', context)
 
 
+def courses(request):
+    return render(request, 'blog/courses.html', {'title': 'الدورات '})
+
 def about(request):
     return render(request, 'blog/about.html', {'title': 'تواصل معنا '})
 
 
+def index1(request):
+    return render(request, 'blog/index1.html', {'title': 'الرئيسية '})
 
+def single(request):
+    return render(request, 'blog/single.html', {'title': 'الدورات '})
 
 
 

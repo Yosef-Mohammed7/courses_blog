@@ -1,0 +1,106 @@
+{% extends 'blog/courses.html' %}
+{% load static %}
+
+{% block body %}
+
+	<!-- Page info -->
+	<div class="page-info-section set-bg" data-setbg="{% static 'blog/images/img/page-bg/1.jpg'%}">
+		<div class="container">
+			<div class="site-breadcrumb">
+				<a href=" {% url 'index1' %} ">الرئيسية</a>
+				<span>الدورات</span>
+			</div>
+		</div>
+	</div>
+	<!-- Page info end -->
+
+
+	<!-- search section -->
+	<section class="search-section ss-other-page">
+		<div class="container">
+			<div class="search-warp">
+				<div class="section-title text-white">
+					<h2><span>ابحث عن دورتك </span></h2>
+				</div>
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<!-- search form -->
+						<form class="course-search-form">
+							<input type="text" placeholder="الدورة ">
+							<input type="text" class="last-m" placeholder="الفئة">
+							<button class="site-btn btn-dark">البحث عن الدورة </button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- search section end -->
+
+
+	<!-- single course section -->
+	<section class="single-course spad pb-0">
+		<div class="container">
+			<div class="course-meta-area">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="course-note">دورة مميزة</div>
+						<h3>HTNL5 & CSS For Begginers</h3>
+						<div class="course-metas">
+							<div class="course-meta">
+								<div class="course-author">
+									<div class="ca-pic set-bg" data-setbg="{% static 'blog/images/img/authors/2.jpg'%}"></div>
+									<h6>المدرب</h6>
+									<p>اسم المدرب, <span>مطور</span></p>
+								</div>
+							</div>
+							<div class="course-meta">
+								<div class="cm-info">
+									<h6>الفئة</h6>
+									<p>تطوير المواقع</p>
+								</div>
+							</div>
+							<div class="course-meta">
+								<div class="cm-info">
+									<h6>المتدربين</h6>
+									<p>120 متدرب </p>
+								</div>
+							</div>
+							<div class="course-meta">
+								<div class="cm-info">
+									<h6>التقييم </h6>
+									<p>4  <span class="rating">
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star"></i>
+										<i class="fa fa-star is-fade"></i>
+									</span></p>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="site-btn price-btn">free</a>
+						<a href="#" class="site-btn buy-btn">انضم </a>
+					</div>
+				</div>
+			</div>
+	<!-- Page end -->
+
+
+	<!-- banner section -->
+	<section class="banner-section spad">
+		<div class="container">
+			<div class="section-title mb-0 pb-2">
+				<h2>انضم ألينا الان !</h2>
+<p>في هذه المنصه نهدف الى تطوير المهارات لدى الطلاب وتدريبهم للسوق العمل</p>
+			</div>
+			<div class="text-center pt-5">
+				<a href="#" class="site-btn">سجل الان </a>
+			</div>
+		</div>
+	</section>
+
+	<!-- banner section end -->
+
+
+	{% endblock body %}

@@ -1,0 +1,151 @@
+{% extends 'blog/base1.html' %}
+{% load static %}
+
+
+{% block body %}
+
+
+
+
+	<section class="hero-section set-bg" data-setbg="{% static 'blog/images/img/bg.jpg' %}">
+		<div class="container">
+			<div class="hero-text text-white ">
+				<h2>تطوير المهارات الذاتي</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-10 offset-lg-1">
+					
+				</div>
+			</div>
+		</div>
+		<br>		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<section class="search-section ss-other-page">
+			<div class="container">
+				<div class="search-warp">
+					<div class="section-title text-white">
+						<h2><span>ابحث عن دورتك </span></h2>
+					</div>
+					<div class="row">
+						<div class="col-lg-10 offset-lg-1">
+							<!-- search form -->
+							<form class="course-search-form">
+								<input type="text" placeholder="الدورة ">
+								<input type="text" class="last-m" placeholder="الفئة">
+								<button class="site-btn btn-dark">البحث عن الدورة </button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</section>
+	
+<!-- search section end -->
+
+
+
+	<!-- Hero section end -->
+
+
+	<!-- categories section -->
+	<section class="categories-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>فئات الدورات لدينا</h2>
+			</div>
+			<div class="row">
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/1.jpg' %}" >
+							></div>
+						<div class="ci-text">
+							<h5>تقنية المعلومات </h5>
+							<p>انضم لهذه الدورة </p>
+							<span>120 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/5.jpg' %}"></div>
+						<div class="ci-text">
+							<h5>تطوير المواقع</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>70 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/3.jpg' %}"></div>
+						<div class="ci-text">
+							<h5>التصوير</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>55 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/4.jpg' %}"></div>
+						<div class="ci-text">
+							<h5>التواصل الاجتماعي</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>40 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/5.jpg' %}"></div>
+						<div class="ci-text">
+							<h5>التصميم</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>220 Courses</span>
+						</div>
+					</div>
+				</div>
+				<!-- categorie -->
+				<div class="col-lg-4 col-md-6">
+					<div class="categorie-item">
+						<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/6.jpg' %}"></div>
+						<div class="ci-text">
+							<h5>العملات الرقمية</h5>
+							<p>انضم لهذه الدورة </p>
+							<span>25 Courses</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- categories section end -->
+
+
+	<!-- banner section -->
+	<section class="banner-section spad">
+		<div class="container">
+			<div class="section-title mb-0 pb-2">
+				<h2>انضم ألينا الان !</h2>
+<p>في هذه المنصه نهدف الى تطوير المهارات لدى الطلاب وتدريبهم للسوق العمل</p>
+			</div>
+			<div class="text-center pt-5">
+				<a href="{% url 'register' %}" class="site-btn">سجل الان </a>
+			</div>
+		</div>
+	</section>
+
+	<!-- banner section end -->
+
+
+	{% endblock body %}
