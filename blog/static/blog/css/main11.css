@@ -1134,7 +1134,7 @@ ol {
 	border-radius: 0;
 	font-size: 16px;
 	font-weight: 600;
-	color: #1f1f1f;
+	color: #45464b;
 	border: none;
 	padding: 17px 23px;
 	margin-right: 8px;
@@ -1149,7 +1149,15 @@ ol {
 .tab-element .nav-tabs .nav-link.active {
 	background: red;
 	color: #fff;
-}
+}.bg-secondary {
+	background-color: #45464b !important;
+  }
+  
+  a.bg-secondary:hover, a.bg-secondary:focus,
+  button.bg-secondary:hover,
+  button.bg-secondary:focus {
+	background-color: #1a252f !important;
+  }
 
 .tab-element .nav-tabs .nav-link:focus,
 .tab-element .nav-tabs .nav-link:hover {
