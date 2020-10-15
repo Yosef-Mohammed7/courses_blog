@@ -11,8 +11,6 @@ html, body{
 }
 body{
     font-family: 'Tajawal', sans-serif;
-    text-align: right;
-
 }
 
 .dropdown-menu .dropdown-item{
@@ -21,12 +19,12 @@ body{
 }
 
 .bg-secondary{
-    background-color: #549ec9(90, 84, 84)!important;
+    background-color: rgb(59, 46, 179) !important;
     
 }
 
 .bg-light{
-    background-color: rgb(241, 235, 235) !important;
+    background-color: rgb(109, 56, 56) !important;
     box-shadow: 4px 4px 15px 1px #000000;
 
 }

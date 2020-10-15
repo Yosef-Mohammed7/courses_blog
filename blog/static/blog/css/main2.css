@@ -11,6 +11,8 @@ html, body{
 }
 body{
     font-family: 'Tajawal', sans-serif;
+    text-align: right;
+
 }
 
 .dropdown-menu .dropdown-item{
