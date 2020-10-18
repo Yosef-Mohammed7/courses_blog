@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'user.apps.UserConfig',
     'courses',
+    'memberships',
     'crispy_forms',
 
 ]
