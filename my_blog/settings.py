@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'user.apps.UserConfig',
     'courses',
     'memberships',
-    'crispy_forms',
+    'crispy_forms', 
+     'embed_video',
 
 ]
 

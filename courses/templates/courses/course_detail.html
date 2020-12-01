@@ -1,5 +1,5 @@
 {% extends 'courses/base2.html' %}
-
+{% load static %}
 {% block post_detail_link %}
 <li>{{ object.title }}</li>
 {% endblock %}
@@ -21,4 +21,59 @@
 		</div>
 	</div>
 
+
+
+	<section class="single-course spad pb-0">
+
+			<div class="course-meta-area">
+				<div class="row">
+					<div class="col-lg-10 offset-lg-1">
+						<div class="course-note">دورة مميزة</div>
+						<h3>{{ object.title }}</h3>
+						<div class="course-metas">
+							<div class="course-meta">
+								<div class="course-author">
+									<div class="ca-pic set-bg" data-setbg="{% static 'blog/images/img/authors/2.jpg'%}"></div>
+									<p>{{ object.description }}</p>
+								</div>
+							</div>
+
+
+							<div class="course-meta">
+								<div class="cm-info">
+									{% for lesson in object.lessons %}
+									<li><a href="{{ object.get_absolute_url }}">{{ lesson.title }}</a></li>
+									{% endfor %}
+								</div>
+							</div>
+							<div class="course-meta">
+								<div class="cm-info">
+									<h6>تفاصيل</h6>
+									<p>تصميم واجهات المستخدم  </p>
+								</div>
+							</div>
+							<div class="course-meta">
+								<div class="course-author">
+						<div class="course-meta">
+							<div class="cm-info">
+								<h6>المدة</h6>
+								<p>30 ساعة  </p>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<a href="#" class="site-btn price-btn">free</a>
+				<a href="#" class="site-btn buy-btn">انضم </a>
+						</div>
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+	<!-- Page end -->
 {% endblock %}

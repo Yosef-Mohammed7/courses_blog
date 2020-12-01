@@ -1,14 +1,46 @@
 {% extends 'courses/base2.html' %}
+{% load static %}
+{% load post_tag %}
 
 {% block content %}
+
+
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-md-4">
-				<h1>Course List View Page</h1>
-				{% for object in object_list %}
-					<a href="{{ object.get_absolute_url }}">{{ object }}</a>
-				{% endfor %}
+			<div class="col-sm-20 col-md-30 ">
+				<section class="categories-section spad">
+					<div class="container">
+
+							<div class="section-title">
+								<h2>فئات الدورات لدينا</h2>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+{% for object in object_list %}
+
+<div class="card-group">
+	<div class="col-lg-4 col-md-6">
+		<div class="categorie-item">
+			<div class="ci-thumb set-bg" data-setbg="{% static 'blog/images/img/categories/1.jpg' %}" alt="Card image cap">
+				></div>
+			<div class="ci-text">
+				<h5>	<a  href="{{ object.get_absolute_url }}">{{ object }}</a> </h5>
+				<p>{{ object.description }} </p>
+				<h5>	<a   class="btn btn-primary" href="{{ object.get_absolute_url }}">انضم</a> </h5>
+
 			</div>
 		</div>
 	</div>
+</div>
+
+
+
+
+
+{% endfor %}
+
 {% endblock %}

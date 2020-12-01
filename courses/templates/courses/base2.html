@@ -1,37 +1,213 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Django Video Membership</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+{% load static %}
+{% load post_tag %}
 
-</head>
-<body>
+<html lang="ar">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        {% if title %}
+        <title>   CCSE UOH | {{title}}</title>
+        {% else %}
+        <title> CCSE UOH</title>
+        {% endif %}
+        <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main1.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/freelancer1.css' %}">
+        <link rel="stylesheet" href="{% static 'blog/css/main11.css' %}">
+        <link rel="shortcut icon" href="{% static 'blog/images/favicon.ico' %}">
+        <link rel="shortcut icon" href="{% static 'blog/images/img/44.jpg' %}">
+     </head>
+     <body>
+        <header>
+
+            <div id="preloder">
+                <div class="loader"></div>
+            </div>
+
+            <nav class=" nav-link.active nav-tabs navbar navbar-expand-lg bg-secondary text-uppercase " id="mainNav">
+                <a class="navbar-brand" href="">
+                    <img class="imgme" src="{% static 'blog/images/img/44.jpg' %}">
+                    CCSE UOH </a>
+                <div class="container">
+                  <a class="navbar-brand js-scroll-trigger" href="/"><img src="" alt=""></a>
+                  <button class="navbar-toggler navbar-toggler-righ text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+
+                  </button>
+				  <div class="collapse navbar-collapse" id="navbarResponsive">
+
+                    <ul class="navbar-nav ml-auto">
+
+
+                      <li class="nav-item mx-0 mx-lg-1">
+                           <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
+                           href='/courses'>الدورات </a>
+                       </li>
+
+                        <li class="nav-item mx-0 mx-lg-1">
+                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'home' %}">المدونة </a>
+                         </li>
+                        <li class="nav-item mx-0 mx-lg-1">
+                             <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"href='/memberships'>العضويات </a>
+                         </li>
+                       <li class="nav-item mx-0 mx-lg-1">
+                        <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="##">To Do </a>
+                    </li>
+
+                        <!-- <li class="nav-item mx-0 mx-lg-1">
+                            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#">تواصل معنا </a>
+                        </li> -->
+                    </ul>
+
+                    {% if user.is_authenticated %}
+                    <div class="d-flex p-2">
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item mx-0 mx-lg-1  "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'new_post' %}">تدوينة جديدة</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'profile' %}">الملف الشخصي</a></li>
+                            <li class="nav-item mx-0 mx-lg-1 "><a class=" nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{% url 'logout' %}">تسجيل خروج</a></li>
+                        </ul>
+                        {% else %}
+
+                        <ul class="navbar-nav ml-auto">
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'login' %}">تسجيل الدخول </a>
+                      </li>
+                      <li class="nav-item mx-0 mx-lg-1 ">
+                        <a class="active nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger " href="{% url 'register' %}">التسجيل</a>
+                      </li>
+                    </div>
+
+                    {% endif %}
+
+                    </div>
+                  </div>
+                </div>
+              </nav>
+
+
+
+
+
+        </header>
+        <section class="hero-section set-bg" data-setbg="{% static 'blog/images/img/bg.jpg' %}">
+      		<div class="container">
+      			<div class="hero-text text-white ">
+      				<h2>. تطوير المهارات الذاتي</h2>
+      			</div>
+      			<div class="row">
+      				<div class="col-lg-10 offset-lg-1">
+
+      				</div>
+      			</div>
+      		</div>
+      		<br>		<br>
+      		<br>
+      		<br>
+      		<br>
+      		<br>
+
+      		<section class="search-section ss-other-page">
+      			<div class="container">
+      				<div class="search-warp">
+      					<div class="section-title text-white">
+      						<h2><span>ابحث عن دورتك</span></h2>
+      					</div>
+      					<div class="row">
+      						<div class="col-lg-10 offset-lg-1">
+      							<!-- search form -->
+      							<form class="course-search-form">
+      								<input type="text" placeholder="الدورة ">
+      								<input type="text" class="last-m" placeholder="الفئة">
+      								<button class="site-btn btn-dark">البحث عن الدورة </button>
+      							</form>
+      						</div>
+      					</div>
+      				</div>
+      			</div>
+      		</section>
+      	</section>
+
+
+
 
 	{% include 'courses/messages.html' %}
-
-	<div class="container">
-		<ol class='breadcrumb'>
-	  
-	        {% block post_detail_link %}
-	        {% endblock %}
-
-	        {% if not request.user.is_authenticated %}
-	        <li class='pull-right'><a href="{% url 'register' %}">Register</a></li>
-	        <li class='pull-right'><a href="{% url 'login' %}">Login</a></li>
-	       
-	        <li class='pull-right'><a href='/memberships'>Memberships</a></li>
-	        {% endif %}
-	    </ol>
-	</div>
+<br>
 
 	{% block content %}
 	{% endblock content %}
 
-	<script
-  	src="https://code.jquery.com/jquery-3.3.1.js"
-  	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  	crossorigin="anonymous"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer class="bg-secondary">
+		<div class="container-fluid">
+				<div class="row">
+						<div class="col-md">
+								<div class="card-group mt-3 ">
+
+
+
+
+
+
+
+										<div class="card m-3">
+												<h3 class="card-header  text-center border-bottom p-2 m-3">التخصصات </h3>
+												<h4 class="card-body text-center">
+
+										</div>
+										<div class="card m-3">
+												<h3 class="card-header  text-center border-bottom p-2 m-3"> للاخبار!! </h3>
+												<h4 class="card-body text-center">
+														<p class="card-text">
+																<div class="widget-item">
+																		<form class="footer-newslatter">
+																				<input type="email" placeholder="E-mail">
+																				<button class="site-btn">الاشتراك </button>
+																		</form>
+																</div>
+												</h4>
+										</div>
+										<div class="card m-3">
+												<h3 class="card-header  text-center border-bottom p-2 m-3">وسائل التواصل الاجتماعي</h3>
+												<h4 class="card-body text-center">
+														<div class="widget-item">
+																<h4></h4>
+																<ul>
+																		<li><a href="">--------</a></li>
+																		<li><a href="">--------</a></li>
+
+																</ul>
+														</div>
+										</div>
+
+
+								</div>
+						</div>
+				</div>
+				<div class="row p-2">
+						<div class="col-md text-center">
+								<small class="text-light">&copy; جميع الحقوق محفوظة {% now 'Y' %}</small>
+						</div>
+				</div>
+		</div>
+</footer>
+
+
+<script src="{% static 'blog/js/jquery-3.3.1.slim.min.js' %}"></script>
+<script src="{% static 'blog/js/popper.min.js' %}"></script>
+<script src="{% static 'blog/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'blog/js/fontawesome-all.min.js' %}"></script>
+<script src="{% static 'blog/js/mixitup.min.js' %}"></script>
+<script src="{% static 'blog/js/circle-progress.min.js' %}"></script>
+<script src="{% static 'blog/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'blog/js/main.js' %}"></script>
+<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
 </body>
+
 </html>
